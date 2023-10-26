@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const ejs = require('ejs');
 const path = require('path');
 
 const app = express();
@@ -8,19 +9,21 @@ const port = 3001;
 // Configure bodyParser to parse form data
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Set public folder as root
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Set 'views' folder as the default templates directory
+app.set('/', path.join(__dirname, 'views'));
+
+// Set view engine as EJS
+app.engine('ejs', require('ejs').renderFile);
+
+// Set 'ejs' as the default template engine
+app.set('view engine', 'ejs');
+
 // Serve the index.html file
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Serve the main.css file
-app.get('/main.css', (req, res) => {
-  res.sendFile(path.join(__dirname, 'main.css'));
-});
-
-// Serve the result.css file
-app.get('/result.css', (req, res) => {
-  res.sendFile(path.join(__dirname, 'result.css'));
 });
 
 app.post('/calculate-bmi', (req, res) => {
@@ -28,21 +31,7 @@ app.post('/calculate-bmi', (req, res) => {
   const weight = parseFloat(req.body.weight);
   const height = parseFloat(req.body.height);
   const bmi = (weight / (height ** 2)) * 10000;
-  res.send(`<!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <title>BMI Result</title>
-      <link rel="stylesheet" href="result.css">
-  </head>
-  <body>
-      <h1>Result</h1>
-      <div class="container">
-      <h2>Hello ${name}, your BMI is: </h2>
-      <p id="bmi-result">${bmi.toFixed(2)}</p>
-      </div>
-  </body>
-  </html>`);
+  res.render('result.ejs', { name, bmi });
 });
 
 app.listen(port, () => {
