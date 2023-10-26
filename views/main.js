@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const path = require('path');
-
 const app = express();
 const port = 3001;
 
@@ -13,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Set 'views' folder as the default templates directory
-app.set('/', path.join(__dirname, 'views'));
+// app.set('/', path.join(__dirname, 'views'));
 
 // Set view engine as EJS
 app.engine('ejs', require('ejs').renderFile);
@@ -26,12 +25,14 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+
+// Handle POST request to the BMI calculator
 app.post('/calculate-bmi', (req, res) => {
   const name = req.body.name;
   const weight = parseFloat(req.body.weight);
   const height = parseFloat(req.body.height);
-  const bmi = (weight / (height ** 2)) * 10000;
-  res.render('result.ejs', { name, bmi });
+  const bmi = ((weight / (height ** 2)) * 10000).toFixed(2);
+  res.render('result', { name, bmi });
 });
 
 app.listen(port, () => {
