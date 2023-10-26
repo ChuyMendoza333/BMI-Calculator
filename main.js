@@ -1,29 +1,22 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const path = require('path');
 const app = express();
 const port = 3001;
 
-// Configure bodyParser to parse form data
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// Set public folder as root
+// Middlewares
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set 'views' folder as the default templates directory
-// app.set('/', path.join(__dirname, 'views'));
-
-// Set view engine as EJS
-app.engine('ejs', require('ejs').renderFile);
-
-// Set 'ejs' as the default template engine
-app.set('view engine', 'ejs');
 
 // Serve the index.html file
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+
 
 
 // Handle POST request to the BMI calculator
