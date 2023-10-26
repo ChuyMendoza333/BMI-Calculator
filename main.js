@@ -38,7 +38,7 @@ app.post('/calculate-bmi', (req, res) => {
   <body>
       <h1>Result</h1>
       <div class="container">
-      <h2>Hello, ${name}, your BMI is: </h2>
+      <h2>Hello ${name}, your BMI is: </h2>
       <p id="bmi-result">${bmi.toFixed(2)}</p>
       </div>
   </body>
