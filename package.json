@@ -2,11 +2,12 @@
   "name": "express_server",
   "version": "1.0.0",
   "description": "Server to display a calculation app",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "user 333",
+  "author": "Jesus Antonio Mendoza Tovar",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
@@ -14,5 +15,5 @@
     "express": "^4.18.2",
     "yarn": "^1.22.19"
   },
-  "repository": "https://github.com/ChuyMendoza333/Basic-Express-Server.git"
+  "repository": "https://github.com/ChuyMendoza333/BMI-Calculator.git"
 }
