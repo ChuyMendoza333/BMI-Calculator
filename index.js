@@ -24,6 +24,9 @@ app.post('/calculate-bmi', (req, res) => {
   const name = req.body.name;
   const weight = parseFloat(req.body.weight);
   const height = parseFloat(req.body.height);
+  if (isNaN(weight) || isNaN(height)) {
+    res.send('Please enter valid values');
+  }
   const bmi = ((weight / (height ** 2)) * 10000).toFixed(2);
   res.render('result', { name, bmi });
 });
