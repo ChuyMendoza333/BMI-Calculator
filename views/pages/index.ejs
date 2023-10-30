@@ -7,13 +7,15 @@
 </head>
 
 <body>
-  <header>
+  <!-- Header starts -->
     <%- include('../partials/header.ejs') %>
-  </header>
+  <!-- Header ends -->
   <div class="col-md-12" id="intro-container">
     <div class="text-cententer" id="intro">
       <p class="text-center">Welcome to the BMI Prediction. This application allows you to predict and calculate your Body Mass Index (BMI) based on your weight and height.</p>
+      <div class="img-container">
       <img src="images/BMI.jpg" alt="BMI" class="img-fluid" style="height: 300px;">
+      </div>
       <div class="text-center">
         <h2>How BMI is Calculated</h2>
         <p>Body Mass Index (BMI) is calculated using the formula:</p>
@@ -65,7 +67,9 @@
       </form>
     </div>
   </div>
+  <!-- Footer starts -->
   <%- include('../partials/footer.ejs') %>
+  <!-- Footer ends -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

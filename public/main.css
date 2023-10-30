@@ -62,6 +62,8 @@ body {
 
 #intro i {
   background-color: rgba(21, 11, 170, 0.986);
+  border-radius: 15px;
+  box-shadow: 0 0 10px #cef8ff;
   color: #f2ecec;
   padding: 20px;
   font-family: serif;
@@ -72,6 +74,12 @@ body {
   margin: 30px;
 }
 
+img {
+  background-color: #000000;
+  margin: 10px;
+  box-shadow: 0 0 30px #cef8ff;
+  border-radius: 15px;
+}
 
 /* Estilo para el formulario */
 form {
