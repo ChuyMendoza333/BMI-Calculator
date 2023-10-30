@@ -14,23 +14,6 @@ body {
   
 }
 
-header {
-  display: flex;
-  background-color: #061148;
-  margin: 0;
-  font-family: 'Elephant', Times, serif;
-  justify-content: center;
-}
-
-/* Estilo para el encabezado principal */
-h1 {
-  color: #f2ecec;
-  background-color: #061148;
-  padding: 10px;
-  font-family: 'Elephant', Times, serif;
-  font-size: 48px;
-  font-weight: bold;
-}
 #intro-container {
   width: 100%;
   background-color: rgb(0,0,0,0.75);
@@ -46,7 +29,6 @@ h1 {
   padding: 30px;
   font-size: larger;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: bold;
   margin: auto;
   width: 75%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -73,9 +55,21 @@ h1 {
   margin-left: 30%;
   font-family: serif;
   font-size: 20px;
-  font-weight: bold;
   text-align: left;
   width: auto;
+  font-style: italic;
+}
+
+#intro i {
+  background-color: rgba(21, 11, 170, 0.986);
+  color: #f2ecec;
+  padding: 20px;
+  font-family: serif;
+  font-size: 30px;
+  text-align: left;
+  width: auto;
+  font-style: italic;
+  margin: 30px;
 }
 
 
