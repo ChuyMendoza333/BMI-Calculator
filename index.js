@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the index.html file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.render('pages/index');
 });
 
 
@@ -33,9 +33,6 @@ app.listen(port, () => {
   console.log(`Go to http://localhost:${port}/ to check the app`);
 });
 
-//   // Send the results page with the BMI result
-//   res.sendFile(path.join(__dirname, 'result.html'));
-// });
 
 
 

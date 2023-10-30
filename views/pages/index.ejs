@@ -2,22 +2,30 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMI Calculator</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/public/main.css">
+  <%- include('../partials/head.ejs') %>
+  <link rel="stylesheet" href="/main.css">
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#">
-        <h1>BMI Calculator</h1>
-      </a>
-    </nav>
+    <%- include('../partials/header.ejs') %>
   </header>
-  <div class="container mt-4">
+  <div class="col-md-12" id="intro-container">
+    <div class="text-cententer" id="intro">
+      <p class="text-center">Welcome to the BMI Calculator. This application allows you to calculate your Body Mass Index (BMI) based on your weight and height.</p>
+      <div class="text-center">
+        <h2>How BMI is Calculated</h2>
+        <p>Body Mass Index (BMI) is calculated using the formula:</p>
+        <p>BMI = (Weight in kilograms) / (Height in meters)^2</p>
+        <p>Where:</p>
+        <ul>
+          <li>Weight is in kilograms.</li>
+          <li>Height is in meters.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4 mb-4" id="main-container">
     <div class="col-md-12 text-center">
       <form action="/calculate-bmi" method="post" class="mx-auto">
         <div class="form-group">
@@ -36,9 +44,7 @@
       </form>
     </div>
   </div>
-  <footer class="text-center mt-5">
-    <p>&copy; 2023 BMI Calculator. All rights reserved.</p>
-  </footer>
+  <%- include('../partials/footer.ejs') %>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

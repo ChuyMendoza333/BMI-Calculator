@@ -1,92 +1,146 @@
 /* Estilo para todo el cuerpo de la página */
+/* Estilo para todo el cuerpo de la página */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: linear-gradient(45deg, #0000,#0fa4ce, #dada0a);
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-  }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3876d3,#f7f7f7, #3876d3);
+
+  /* background: linear-gradient(45deg, #0000, #0fa4ce, #dada0a); */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  width: 100%;
   
-  /* Estilo para el encabezado principal */
-  h1 {
-    color: #f2ecec;
-    background-color: #061148;
-    padding: 20px;
-    margin: 0;
-    font-family: 'Elephant', Times, serif;
-    font-size: 42px;
-  }
-  .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Estilo para el formulario */
-  form {
-    background-color:#5074c1a7;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-  }
-  
-  /* Estilo para etiquetas de entrada */
-  label {
-    display: block;
-    color: #f2ecec;
-    margin-bottom: 8px;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Estilo para campos de entrada de texto */
-  input[type="text"] {
-    width: 100%;
-    padding: 10px 0px;
-    font-size: 21px;
-    font-weight: bold;
-    margin: 10px 0 22px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  /* Estilo para el botón de enviar */
-  button[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-   
-  }
-  
-  /* Estilo para el botón de enviar cuando se pasa el cursor por encima */
-  button[type="submit"]:hover {
-    background-color: #4551a0;
-    scale: 1.2;
-    transition: 0.5s;
-  }
-  
-  /* Estilo para mensajes de error */
-  .error-message {
-    color: #d9534f;
-    margin-top: 10px;
-  }
-  
-  /* Estilo para mensajes de éxito */
-  .success-message {
-    color: #5bc0de;
-    margin-top: 10px;
-  }
-  
+}
+
+header {
+  display: flex;
+  background-color: #061148;
+  margin: 0;
+  font-family: 'Elephant', Times, serif;
+  justify-content: center;
+}
+
+/* Estilo para el encabezado principal */
+h1 {
+  color: #f2ecec;
+  background-color: #061148;
+  padding: 10px;
+  font-family: 'Elephant', Times, serif;
+  font-size: 48px;
+  font-weight: bold;
+}
+#intro-container {
+  width: 100%;
+  background-color: rgb(0,0,0,0.75);
+  padding: 30px;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f2ecec;
+  background-color: rgb(0,0,0,0.75);
+  padding: 30px;
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  margin: auto;
+  width: 75%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border-color: #4558c2;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 30px;
+}
+
+#intro h2 {
+  color: #c8eaf5;
+  background-color: rgb(0,0,0,0.5);
+  padding: 10px;
+  margin: 0;
+  font-family: serif;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#intro li {
+  color: #f2ecec;
+  padding: 10px;
+  margin-left: 30%;
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  width: auto;
+}
+
+
+/* Estilo para el formulario */
+form {
+  background-color: #5074c1a7;
+  padding: 20px;
+  border-radius: 30px;
+  border-color: #061148;
+  border-style: solid;
+  border-width: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  width: 75%;
+}
+
+/* Estilo para etiquetas de entrada */
+label {
+  display: block;
+  color: #f2ecec;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilo para campos de entrada de texto */
+input[type="text"] {
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 10px 0 22px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Estilo para el botón de enviar */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Estilo para el botón de enviar cuando se pasa el cursor por encima */
+button[type="submit"]:hover {
+  background-color: #4551a0;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+/* Estilo para mensajes de error */
+.error-message {
+  color: #d9534f;
+  margin-top: 10px;
+}
+
+/* Estilo para mensajes de éxito */
+.success-message {
+  color: #5bc0de;
+  margin-top: 10px;
+}
