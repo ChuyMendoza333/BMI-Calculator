@@ -1,10 +1,9 @@
 /* Estilos para la página de resultados */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: linear-gradient(45deg, #0000,#0fa4ce, #dada0a);
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3876d3,#f7f7f7, #3876d3);
   }
   
   h1 {
@@ -15,9 +14,9 @@ body {
     font-family: 'Elephant', Times, serif;
     font-size: 42px;
   }
-  h2 {
+  #hello {
     color: #000000;
-    padding: 20px;
+    padding: 10px;
     font-size: 36px;
     font-weight: bold;
     margin: 0;

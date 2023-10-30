@@ -8,13 +8,13 @@
 
 <body>
   <!-- Header starts -->
-    <%- include('../partials/header.ejs') %>
+  <%- include('../partials/header.ejs') %>
   <!-- Header ends -->
   <div class="col-md-12" id="intro-container">
-    <div class="text-cententer" id="intro">
+    <div class="text-center" id="intro">
       <p class="text-center">Welcome to the BMI Prediction. This application allows you to predict and calculate your Body Mass Index (BMI) based on your weight and height.</p>
       <div class="img-container">
-      <img src="images/BMI.jpg" alt="BMI" class="img-fluid" style="height: 300px;">
+        <img src="images/BMI.jpg" alt="BMI" class="img-fluid" style="height: 450px;">
       </div>
       <div class="text-center">
         <h2>How BMI is Calculated</h2>
@@ -52,8 +52,11 @@
           <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
         </div>
         <div class="form-group">
-          <label for="age">Age</label>
-          <input type="text" class="form-control" name="age" id="age" placeholder="Enter your age" required>
+          <label for="genre">Genre:</label>
+          <select class="form-control" name="genre" id="genre">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="weight">Weight (kg)</label>
@@ -67,6 +70,14 @@
       </form>
     </div>
   </div>
+  <!-- <a href="https://time.is/Mexico" id="time_is_link" rel="nofollow" style="font-size:36px">Hora local en México:</a>
+<span id="Mexico_z159" style="font-size:36px"></span>
+<script src="//widget.time.is/t.js"></script>
+<script>
+time_is_widget.init({Mexico_z159:{}});
+</script> -->
+
+
   <!-- Footer starts -->
   <%- include('../partials/footer.ejs') %>
   <!-- Footer ends -->

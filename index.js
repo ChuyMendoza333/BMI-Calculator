@@ -28,7 +28,7 @@ app.post('/calculate-bmi', (req, res) => {
     res.send('Please enter valid values');
   }
   const bmi = ((weight / (height ** 2)) * 10000).toFixed(2);
-  res.render('result', { name, bmi });
+  res.render('pages/result', { name, bmi });
 });
 
 app.listen(port, () => {

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+  <link rel="stylesheet" href="result.css">
+  <!-- Agregar los enlaces a los archivos de Bootstrap (CSS) aquí -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <!-- Header starts -->
+  <%- include('../partials/header.ejs') %>
+  <!-- Header ends -->
+  <div class="container mb-5 mt-5">
+    <h2 class="mt-5" id="hello">Hello <%= name %>, your BMI is: </h2>
+    <p id="bmi-result" class="display-4 text-center"><%= bmi %></p>
+    <button class="btn btn-primary" onclick="window.location.href='/';">Calculate Again</button>
+  </div>
+
+  <!-- Footer starts -->
+  <%- include('../partials/footer.ejs') %>
+  <!-- Footer ends -->
+</body>
+
+</html>
